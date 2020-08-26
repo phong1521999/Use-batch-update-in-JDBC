@@ -23,12 +23,12 @@ public class DBContext {
     private final String dbName = "FU_DB";
     private final String portNumber = "1433";
     private final String userID = "sa";
-    private final String password = "123456";
+    private final String password = "12345678";
 
     Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + ";databaseName=" + dbName;
         return DriverManager.getConnection(url, userID, password);
     }
-  
+    
 }
